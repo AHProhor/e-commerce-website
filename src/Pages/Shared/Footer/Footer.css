@@ -1,0 +1,12 @@
+.footerColor {
+  background-color: rgba(230, 224, 224, 0.555);
+}
+.footerStyle {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+.footerStyle a {
+  text-decoration: none;
+  color: black;
+}
