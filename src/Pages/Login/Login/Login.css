@@ -1,19 +1,10 @@
-.loginStyle {
-  display: flex;
+.loginFormStyle {
+  margin-top: auto;
+  margin-bottom: auto;
 }
-.loginStyle img {
-  display: block;
-  background-color: hotpink;
-  margin-left: auto;
+
+.loginImageStyle img {
+  width: 100%;
   margin-right: auto;
-  margin-top: 150px;
-  width: 90%;
-}
-.imagesStyle {
-  width: 100%;
-}
-.loginButtonStyle {
-  width: 100%;
-  margin-left: 400px;
-  margin-top: 450px;
+  margin-left: auto;
 }

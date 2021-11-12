@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './AllProduct.css';
 
 const Allproduct = (props) => {
-    const {img,price,details,name,id} = props.sendAllProduct;
+    const {img,price,details,name,_id} = props.sendAllProduct;
     return (
         <div className="productStyle mb-5  p-3 mb-5 bg-body ">
               <div className=" singleproductStyle shadow ">
@@ -17,8 +17,8 @@ const Allproduct = (props) => {
                     <p>{details}</p>
                     <Card.Text>
                     </Card.Text>
-                    <Link to={`/booking/${id}`}>
-                        <button type="button" className="btn btn-dark fw-bold ">Book Now</button>
+                    <Link to={`/purches/${_id}`}>
+                        <button type="button" className="btn btn-dark fw-bold ">Purches Now</button>
                     </Link>
                 </Card.Body>
             </Card>
