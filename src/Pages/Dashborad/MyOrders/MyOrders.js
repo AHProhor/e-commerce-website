@@ -12,7 +12,23 @@ const MyOrders = () => {
         fetch(url)
         .then(res => res.json())
         .then(data => setOrder(data))
-    },[])
+    },[]);
+    // Delete user
+
+    const handelDeleteOrder = id =>{
+        const url=`http://localhost:5000/orders/${id}`
+        fetch(url,{
+            method:'DELETE'
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.deletedCount> 0){
+                alert('You are Going to Cancel Order');
+                const remainingOrder = order.filter(order => order._id !== id);
+                setOrder(remainingOrder);
+            }
+        })
+    }
     return (
         <div>
             <Navigation></Navigation>
@@ -36,7 +52,9 @@ const MyOrders = () => {
                         <td>{ord.productID}</td>
                         <td>{ord.address}</td>
                         <td>{ord.email}</td>  
-                        <td><Button>Cancel Order</Button></td>  
+                        <td><Button variant="dark" type="submit" onClick={()=>handelDeleteOrder(ord._id)}>
+                            Cancel Order
+                        </Button></td>  
                         </tr>)
                     }
                     

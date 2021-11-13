@@ -43,11 +43,10 @@ const Purchase = () => {
         })
         .then(res => res.json())
         .then(data=> {
-            console.log(data);
+            e.target.reset();
         })
-        alert('order Successful')
         e.preventDefault();
-        
+        alert('order Successful')
     }
     return (
         <>
