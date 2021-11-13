@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [lightHouse online shop livesite link](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [lightHouse online shop livesite link](https://lighst-house-onlineshop.web.app/allproducts).
 
 > main points are
 
