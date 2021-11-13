@@ -1,6 +1,7 @@
 
 import React, { useRef } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
+import Footer from '../../Shared/Footer/Footer';
 import Navigation from '../../Shared/Navigation/Navigation';
 import './Review.css';
 
@@ -51,6 +52,7 @@ const Review = () => {
                         </Button>
             </Form> 
             </Container>
+            <Footer></Footer>
         </div>
     );
 };

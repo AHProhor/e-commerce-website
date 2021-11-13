@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Container, Table } from 'react-bootstrap';
 import useAuth from '../../../Hooks/useAuth';
+import Footer from '../../Shared/Footer/Footer';
 import Navigation from '../../Shared/Navigation/Navigation';
 
 const MyOrders = () => {
@@ -61,6 +62,7 @@ const MyOrders = () => {
                 </tbody>
             </Table>
             </Container>
+            <Footer></Footer>
         </div>
     );
 };
