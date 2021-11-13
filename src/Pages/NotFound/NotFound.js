@@ -1,9 +1,13 @@
-import React from 'react';
 
+import React from 'react';
+import img from '../../images/bannerimg/404img.png';
+import Navigation from '../Shared/Navigation/Navigation';
+import './NotFound.css';
 const NotFound = () => {
     return (
-        <div>
-            <h2>This is notFound Page</h2>
+        <div className="notFoundStyle">
+            <Navigation></Navigation>
+            <img src={img} alt="" /><br />
         </div>
     );
 };

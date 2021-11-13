@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Dropdown, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 
@@ -12,9 +12,18 @@ const Navigation = () => {
                     <Navbar.Brand as={Link} to="/home">Light House</Navbar.Brand>
                     <Nav className="justify-content-end">
                     <Nav.Link as={Link} to="/allproducts">All Products</Nav.Link>
-                    <Nav.Link as={Link} to="/about">About</Nav.Link>
                     {
-                        user.email && <Nav.Link as={Link} to="/dasboard">Dashboard</Nav.Link>
+                        user.email && <Dropdown>
+                        <Dropdown.Toggle variant="dark" id="dropdown-basic">
+                          Dashboard
+                        </Dropdown.Toggle>
+                      
+                        <Dropdown.Menu>
+                          <Dropdown.Item as={Link} to="/myorder">My orders</Dropdown.Item>
+                          <Dropdown.Item as={Link} to="/payment">Payment</Dropdown.Item>
+                          <Dropdown.Item as={Link} to="/review">Review</Dropdown.Item>
+                        </Dropdown.Menu>
+                      </Dropdown>
                     }
                     {
                         user?.email ?
