@@ -6,7 +6,7 @@ const TrendyProducts = () => {
     const [trendyProducts,setTrendyProducts] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/trendyProducts')
+        fetch('https://polar-waters-05894.herokuapp.com/trendyProducts')
         .then(res => res.json())
         .then(data => setTrendyProducts(data))
         

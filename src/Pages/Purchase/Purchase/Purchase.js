@@ -14,7 +14,7 @@ const Purchase = () => {
     const [orderInfo,setOrderInfo] = useState(initialOrder);
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/products/${productId}`)
+        fetch(`https://polar-waters-05894.herokuapp.com/products/${productId}`)
         .then(res => res.json())
         .then(data => setProduct(data))
     },[])
@@ -34,7 +34,7 @@ const Purchase = () => {
         }
 
         // send to ther server
-        fetch('http://localhost:5000/orders',{
+        fetch('https://polar-waters-05894.herokuapp.com/orders',{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'
